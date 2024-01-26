@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- JS File -->
+    <script src="script.js"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main id="card">
+      <div id="input-field-container">
+        <div class="input-wrapper">
+          <label for="day" id="day">day</label>
+          <input type="number" maxlength="2" placeholder="DD" id="day-input" />
+          <p id="day-error">Must be a valid day</p>
+          <p id="day-empty-error">This field is required</p>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="month" id="month">month</label>
+          <input
+            type="number"
+            maxlength="2"
+            placeholder="MM"
+            id="month-input"
+          />
+          <p id="month-error">Must be a valid month</p>
+          <p id="month-empty-error">This field is required</p>
+        </div>
+
+        <div class="input-wrapper">
+          <label for="year" id="year">year</label>
+          <input
+            type="number"
+            maxlength="4"
+            placeholder="YYYY"
+            id="year-input"
+          />
+          <p id="year-error">Must be a valid year</p>
+          <p id="year-empty-error">This field is required</p>
+        </div>
+      </div>
+
+      <div id="divider">
+        <hr />
+        <button id="arrow-btn"></button>
+      </div>
+
+      <div id="results-container">
+        <div class="result">
+          <h1 id="years-result">--</h1>
+          <h1 class="result-title">years</h1>
+        </div>
+        <div class="result">
+          <h1 id="months-result">--</h1>
+          <h1 class="result-title">months</h1>
+        </div>
+        <div class="result">
+          <h1 id="days-result">--</h1>
+          <h1 class="result-title">days</h1>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

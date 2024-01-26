@@ -1,0 +1,254 @@
+/*  (-CSS reset- Credit: Josh Comeau ) */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/*  CSS Reset End */
+
+:root {
+  --primary-clr: hsl(259, 100%, 65%);
+  --secondary-clr: hsl(0, 0%, 8%);
+  --teritary-clr: hsl(0, 1%, 44%);
+
+  --hr-clr: hsl(0, 0%, 86%);
+
+  --error-clr: hsl(0, 100%, 67%);
+
+  --bg-clr: hsl(0, 0%, 94%);
+  --card-bg-clr: hsl(0, 0%, 100%);
+
+  --ff-base: "Poppins", sans-serif;
+
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-bold: 700;
+  --fw-extra-bold: 800;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+
+  background-color: var(--bg-clr);
+  font-family: var(--ff-base);
+  font-weight: var(--fw-bold);
+  font-size: 2rem;
+}
+
+/* Card */
+
+#card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg-clr);
+  width: 52.5rem;
+  padding: 3.4375rem;
+  border-radius: 1.25rem 1.25rem 11.25rem 1.25rem;
+}
+
+/* Input Fields */
+
+#input-field-container {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+label {
+  font-size: 0.875rem;
+  font-weight: var(--fw-semi-bold);
+  text-transform: uppercase;
+  color: var(--teritary-clr);
+  letter-spacing: 0.125rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input {
+  border-radius: 0.5rem;
+  padding: 0.625rem 0 0.625rem 0.9375rem;
+  border: 0.0625rem solid var(--teritary-clr);
+  width: 9.6875rem;
+}
+
+input::placeholder {
+  font-weight: var(--fw-bold);
+}
+
+input:focus {
+  outline-color: var(--primary-clr);
+}
+
+#day-empty-error,
+#month-empty-error,
+#year-empty-error,
+#day-error,
+#month-error,
+#year-error {
+  display: none;
+  color: var(--error-clr);
+  font-size: 0.75rem;
+  font-style: italic;
+  font-weight: var(--fw-regular);
+}
+
+/* Arrow Icon */
+
+#divider {
+  display: flex;
+  align-items: center;
+}
+
+hr {
+  width: 90%;
+  border: none;
+  height: 0.125rem;
+  background-color: var(--hr-clr);
+}
+
+#arrow-btn {
+  background-image: url(assets/images/icon-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 3.125rem;
+  background-color: var(--primary-clr);
+  width: 5.9375rem;
+  height: 5.9375rem;
+}
+
+#arrow-btn:hover {
+  background-color: var(--secondary-clr);
+}
+
+/* Results */
+
+#results-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.result {
+  display: flex;
+  gap: 0.625rem;
+}
+
+#years-result,
+#months-result,
+#days-result,
+.result-title {
+  font-size: 5.625rem;
+  font-weight: var(--fw-extra-bold);
+  font-style: italic;
+}
+
+#years-result,
+#months-result,
+#days-result {
+  color: var(--primary-clr);
+}
+
+.result-title {
+  color: var(--secondary-clr);
+}
+
+@media (max-width: 600px) {
+  #card {
+    width: 21.5625rem;
+    padding: 1.875rem 1.25rem 1.875rem 1.25rem;
+    border-radius: 1.25rem 1.25rem 6.25rem 1.25rem;
+  }
+
+  input {
+    width: 5.3125rem;
+    padding: 0.5rem 0 0.5rem 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  input::placeholder {
+    font-size: 1.5rem;
+  }
+
+  #arrow-btn {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
+  
+  #years-result,
+  #months-result,
+  #days-result,
+  .result-title {
+    font-size: 3rem;
+    font-weight: var(--fw-extra-bold);
+    font-style: italic;
+  }
+
+  #divider {
+    position: relative;
+    margin-block: 3.125rem;
+  }
+
+  hr {
+    width: 100%;
+  }
+
+  #arrow-btn {
+    position: absolute;
+    left: 7.5rem;
+    background-size: 1.875rem;
+  }
+}
